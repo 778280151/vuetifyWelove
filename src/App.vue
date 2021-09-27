@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <dashboard></dashboard>
+    <dashboard v-show="!show"></dashboard>
+    <welove v-show="show"></welove>
   </div>
 </template>
 
 <script>
-import dashboard from "@/views/home/home";
+import dashboard from "@/views/adminhome/home";
+import welove from "@/views/welovehome/index";
 
 export default {
   name: 'App',
   components: {
-    dashboard
-  }
+    welove, dashboard
+  },
+  data: () => ({
+    show: true
+  })
 }
 </script>
 

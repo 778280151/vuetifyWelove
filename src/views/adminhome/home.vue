@@ -5,7 +5,7 @@
 
       <v-icon>mdi-square</v-icon>
 
-      <v-icon>mdi-circle</v-icon>
+      <v-icon @click.native="checkadmin">mdi-circle</v-icon>
 
       <v-icon>mdi-triangle</v-icon>
     </v-system-bar>
@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import dashBoard from '/src/views/darshboard/index'
+import dashBoard from '/src/views/admindarshboard/index'
 
 export default {
   name: "dashboard",
@@ -124,7 +124,11 @@ export default {
   data: () => ({
     drawer: null
   }),
-  methods: {}
+  methods: {
+    checkadmin() {
+      this.$parent.show = true
+    }
+  }
 }
 </script>
 

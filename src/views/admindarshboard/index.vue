@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import item from '@/views/darshboard/item'
+import item from '@/views/admindarshboard/item'
 
 export default {
   name: "index",
