@@ -41,6 +41,8 @@
           color="grey lighten-3"
           mini-variant
       >
+
+
         <v-avatar
             class="d-block text-center mx-auto mt-4"
             color="grey darken-1"
@@ -48,6 +50,7 @@
         ></v-avatar>
 
         <v-divider class="mx-3 my-5"></v-divider>
+
 
         <v-avatar
             v-for="n in 6"
