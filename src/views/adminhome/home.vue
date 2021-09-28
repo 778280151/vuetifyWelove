@@ -5,7 +5,7 @@
 
       <v-icon>mdi-square</v-icon>
 
-      <v-icon @click.native="checkadmin">mdi-circle</v-icon>
+      <v-icon @click.native="checkAdmin">mdi-circle</v-icon>
 
       <v-icon>mdi-triangle</v-icon>
     </v-system-bar>
@@ -125,8 +125,9 @@ export default {
     drawer: null
   }),
   methods: {
-    checkadmin() {
-      this.$parent.show = true
+    checkAdmin() {
+      // this.$parent.show = true
+      this.$router.push("weLoveIndex")
     }
   }
 }

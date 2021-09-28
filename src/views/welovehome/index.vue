@@ -5,7 +5,7 @@
 
       <v-icon>mdi-square</v-icon>
 
-      <v-icon @click="checkadmin">mdi-circle</v-icon>
+      <v-icon @click="checkAdmin">mdi-circle</v-icon>
 
       <v-icon>mdi-triangle</v-icon>
     </v-system-bar>
@@ -61,8 +61,9 @@ export default {
     drawer: null
   }),
   methods: {
-    checkadmin() {
-      this.$parent.show = false
+    checkAdmin() {
+      // this.$parent.show = false
+      this.$router.push("/login")
     }
   }
 }

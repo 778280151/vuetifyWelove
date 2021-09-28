@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <dashboard v-show="!show"></dashboard>
-    <welove v-show="show"></welove>
+    <router-view ref="/"></router-view>
+    <!--    <dashboard v-show="!show"></dashboard>-->
+    <!--    <welove v-show="show"></welove>-->
   </div>
 </template>
 
 <script>
-import dashboard from "@/views/adminhome/home";
-import welove from "@/views/welovehome/index";
+// import dashboard from "@/views/adminhome/home";
+// import welove from "@/views/welovehome/index";
 
 export default {
   name: 'App',
-  components: {
-    welove, dashboard
-  },
+  // components: {
+  //   welove, dashboard
+  // },
   data: () => ({
     show: true
   })

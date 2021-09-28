@@ -3,7 +3,7 @@
       class="pl-14"
       shaped
   >
-    <v-list-item v-for="v in this.$router.getRoutes()">
+    <v-list-item v-for="v in this.$router.getRoutes()" :key="v.name">
       <router-link :to="v.path">{{ v.name }}</router-link>
     </v-list-item>
   </v-list>

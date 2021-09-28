@@ -37,14 +37,30 @@ Vue.use(Router)
 export const constantRoutes = [
   {
     path: '/',
-    component: indexA,
-    redirect: '/index',
-    // children: [{
-    //   path: 'index',
-    //   name: 'index',
-    //   component: () => import('@/views/A/index'),
-    //   meta: { title: 'Dashboard', icon: 'dashboard' }
-    // }]
+    component: () => import('@/views/welovehome/index'),
+    redirect: '/weLoveIndex',
+    children: [{
+      path: 'weLoveIndex',
+      name: 'weLoveIndex',
+      component: () => import('@/views/A/index'),
+      meta: {title: 'Dashboard', icon: 'dashboard'}
+    }]
+  },
+
+  {
+    path: '/adminIndex',
+    component: () => import('@/views/adminhome/home'),
+    // redirect: '/example/table',
+    name: 'adminIndex',
+    meta: {title: 'Example', icon: 'example'},
+  },
+
+  {
+    path: '/login',
+    component: () => import('@/views/login/login'),
+    // redirect: '/example/table',
+    name: 'login',
+    meta: {title: 'Example', icon: 'example'},
   },
 
   {
