@@ -130,6 +130,9 @@ export default {
     login() {
       console.log(this.form)
       this.$router.push("/adminIndex")
+    },
+    loading() {
+      return "true"
     }
   }
 }
