@@ -49,7 +49,7 @@
           <!--               </div>-->
           <!--             </v-row>-->
           <v-row>
-            <v-form ref="form" v-model="form">
+            <v-form>
               <v-container>
                 <v-row>
                   <v-col cols="12" md="4">
@@ -62,10 +62,10 @@
                   </v-col>
 
                   <v-col cols="12" md="3">
-                    <v-text-field
-                        v-model="form.password"
-                        label="密码"
-                        required
+                    <v-text-field type="password"
+                                  v-model="form.password"
+                                  label="密码"
+                                  required
                     ></v-text-field>
                   </v-col>
                 </v-row>
@@ -116,6 +116,8 @@
 </template>
 
 <script>
+import {login} from '@/api/user'
+
 export default {
   name: "login",
   data: () => ({
@@ -129,7 +131,12 @@ export default {
   methods: {
     login() {
       console.log(this.form)
-      this.$router.push("/adminIndex")
+      login(this.form).then(res => {
+        console.log(res)
+        if (res.code == '20000' && res.data.token.length > 5) {
+          this.$router.push("/adminIndex")
+        }
+      })
     },
     loading() {
       return "true"
