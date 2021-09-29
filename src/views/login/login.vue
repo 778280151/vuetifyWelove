@@ -4,9 +4,9 @@
     <!--         &lt;!&ndash; &ndash;&gt;-->
     <!--       </v-navigation-drawer>-->
 
-    <v-app-bar app>
-      <!-- -->
-    </v-app-bar>
+    <!--    <v-app-bar app>-->
+    <!--      &lt;!&ndash; &ndash;&gt;-->
+    <!--    </v-app-bar>-->
 
     <v-main>
 
